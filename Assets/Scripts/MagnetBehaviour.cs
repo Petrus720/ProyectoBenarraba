@@ -8,13 +8,13 @@ public class MagnetBehaviour : MonoBehaviour
     public static MagnetBehaviour Instance;
     private MeshRenderer attachedDuckRenderer;
     private Collider attachedDuckCollider;
-    public GameManager gameManager;
+    public CanvaController canvaController;
     
 
 
     private void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        canvaController = GameObject.Find("CanvasDuck").GetComponent<CanvaController>();
         attachedDuckRenderer = GetComponent<MeshRenderer>();
         attachedDuckCollider = GetComponent<Collider>();
     }
@@ -23,10 +23,9 @@ public class MagnetBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("CollectedZone"))
         {
-            //GameManager.Instance.CurrentPoints += GameManager.Instance.duckPoints;
-            
+ 
             attachedDuckRenderer.enabled = false;
-            gameManager.currentPoints += gameManager.duckPoints;
+            canvaController.currentPoints += canvaController.gamePoints;
             attachedDuckCollider.enabled = false;
         }
     }

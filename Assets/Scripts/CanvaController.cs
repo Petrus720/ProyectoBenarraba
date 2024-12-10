@@ -5,15 +5,16 @@ using TMPro;
 
 public class CanvaController : MonoBehaviour
 {
-    public TMP_Text duckText;
-    public GameManager gameManager;
+    public TMP_Text gameText;
+    public int currentPoints;
+    public int gamePoints;
 
     private void Start()
     {
-        gameManager  = FindObjectOfType<GameManager>();
+        currentPoints = 0;
     }
     private void OnGUI()
     {
-        duckText.text = "Puntuación: " + gameManager.currentPoints.ToString("0000");
+        gameText.text = "Puntuación: " + currentPoints.ToString("0000");
     }
 }

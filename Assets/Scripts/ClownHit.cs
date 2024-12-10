@@ -5,6 +5,7 @@ using UnityEngine;
 public class ClownHit : MonoBehaviour
 {
     public Animator clownAnimator;
+    public CanvaController canvaController; 
 
     private void Start()
     {

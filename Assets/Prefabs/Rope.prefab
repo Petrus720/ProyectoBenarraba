@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6422206479555353763}
   - component: {fileID: 4622758792570334894}
   - component: {fileID: 8834582691420216082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,11 +99,11 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.8613482
   m_Height: 1.7718966
@@ -165,7 +165,7 @@ GameObject:
   - component: {fileID: 4582293782614888630}
   - component: {fileID: 4331042975838063881}
   - component: {fileID: 4777367132760133255}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 688449607396698334}
   - component: {fileID: 2393198597034177683}
   - component: {fileID: 6534707144135395285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,7 +401,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 683522555586612736}
   - component: {fileID: 2113370962728109976}
   - component: {fileID: 7205257759565209776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,7 +552,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07aac68b47f0f842a04300e422008e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  canvaController: {fileID: 0}
 --- !u!1 &3166431607397592796
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,11 +761,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6325528841519410282}
   - component: {fileID: 4573242706871505791}
-  - component: {fileID: 1708621471847281485}
-  - component: {fileID: 6483124019255795507}
+  - component: {fileID: 2421783496014705296}
   m_Layer: 0
-  m_Name: Cuerda
-  m_TagString: Rope
+  m_Name: Rope
+  m_TagString: Instantiated
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -825,7 +824,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1708621471847281485
+--- !u!114 &2421783496014705296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -876,7 +875,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4573242706871505791}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_useGravity
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -972,35 +983,12 @@ MonoBehaviour:
     m_RotationOrder: 4
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
-  m_ForceGravityOnDetach: 1
+  m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &6483124019255795507
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3166431607397592796}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 3.8613482
-  m_Height: 1.7718966
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.26815015, z: -0.000024941757}
 --- !u!1 &3364756634041507671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,7 +1003,7 @@ GameObject:
   - component: {fileID: 6278452864481746252}
   - component: {fileID: 5440707691549485169}
   - component: {fileID: 1922173643779595546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1100,7 +1088,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1166,7 +1154,7 @@ GameObject:
   - component: {fileID: 5328040410620255955}
   - component: {fileID: 8682698548414042002}
   - component: {fileID: 8047967599466758151}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1239,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1317,7 +1305,7 @@ GameObject:
   - component: {fileID: 1091747118777584426}
   - component: {fileID: 2716866891877559653}
   - component: {fileID: 8732922587370835728}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (11)
   m_TagString: Magnet
   m_Icon: {fileID: 0}
@@ -1402,7 +1390,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1468,7 +1456,7 @@ GameObject:
   - component: {fileID: 6042392148193760746}
   - component: {fileID: 7826457108797869038}
   - component: {fileID: 3420839023472598903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1553,7 +1541,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1619,7 +1607,7 @@ GameObject:
   - component: {fileID: 882773845451769833}
   - component: {fileID: 6513653272028122979}
   - component: {fileID: 5832315200887343614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1704,7 +1692,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1770,7 +1758,7 @@ GameObject:
   - component: {fileID: 3181382004033929995}
   - component: {fileID: 1702758815576312101}
   - component: {fileID: 2051721365816180265}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1843,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -1921,7 +1909,7 @@ GameObject:
   - component: {fileID: 7000326925484003782}
   - component: {fileID: 8049118996457956509}
   - component: {fileID: 1913478049456071955}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2006,7 +1994,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
@@ -2072,7 +2060,7 @@ GameObject:
   - component: {fileID: 2644156172676272430}
   - component: {fileID: 4636806955137399691}
   - component: {fileID: 8533327313231419384}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cylinder (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2157,7 +2145,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 136
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0

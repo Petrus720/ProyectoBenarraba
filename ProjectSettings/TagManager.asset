@@ -4,12 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Rope
   - Magnet
   - CollectedZone
   - Props
   - Building
   - Bullet
+  - Instantiated
+  - Basketball
   layers:
   - Default
   - TransparentFX

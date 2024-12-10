@@ -4,36 +4,25 @@ using UnityEngine;
 
 public class ButtonInstantiate : MonoBehaviour
 {
-    public GameObject prefab;
-    public GameObject[] ropesOnScene;
-    public Transform instantiatePosition;
+    public GameObject[] instantiationOnScene;
+    
+    public Transform[] instantiatePositions;
 
-    public Transform[] clownInstantiatePositions;
-    public void RopeInstantiaton()
+    public void DestroyInstantiationBefore()
     {
-       foreach (GameObject rope in ropesOnScene)
+        instantiationOnScene = GameObject.FindGameObjectsWithTag("Instantiated");
+        foreach (GameObject inst in instantiationOnScene)
         {
-            Destroy(rope);
-        }
-        Instantiate(prefab, instantiatePosition.position, Quaternion.identity);
-    }
-
-    public void ClownInstantiation()
-    {
-        foreach (Transform clownPos in clownInstantiatePositions)
-        {
-            Instantiate(prefab, clownPos.position, Quaternion.identity);
+            Destroy(inst);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+    public void Instantiation(GameObject prefab)
     {
-        ropesOnScene = GameObject.FindGameObjectsWithTag("Rope");
+        DestroyInstantiationBefore();
+        foreach (Transform pos in instantiatePositions)
+        {
+            Instantiate(prefab, pos.position, Quaternion.identity);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
