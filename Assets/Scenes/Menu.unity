@@ -911,17 +911,17 @@ PrefabInstance:
     - target: {fileID: 2811735976793935164, guid: c99a9819d000dbc418e2e9054b6d38d8,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.3531749
+      value: 0.77750087
       objectReference: {fileID: 0}
     - target: {fileID: 2811735976793935164, guid: c99a9819d000dbc418e2e9054b6d38d8,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.27033645
+      value: 0.74759704
       objectReference: {fileID: 0}
     - target: {fileID: 2811735976793935164, guid: c99a9819d000dbc418e2e9054b6d38d8,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.7075472
+      value: 0.9056604
       objectReference: {fileID: 0}
     - target: {fileID: 3240140859112755441, guid: c99a9819d000dbc418e2e9054b6d38d8,
         type: 3}
